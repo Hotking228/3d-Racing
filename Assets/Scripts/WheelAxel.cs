@@ -37,6 +37,12 @@ public class WheelAxel
 
 
     #region Public API
+
+    public void ConfigureVehicleSubsteps(float speedTreshold, int speedBelowTreshold, int stepsAboveTreshold)
+    {
+        leftWheelCollider.ConfigureVehicleSubsteps(speedTreshold, speedBelowTreshold, stepsAboveTreshold);
+        rightWheelCollider.ConfigureVehicleSubsteps(speedTreshold, speedBelowTreshold, stepsAboveTreshold);
+    }
     public void Update()
     {
         UpdateWheelHits();
